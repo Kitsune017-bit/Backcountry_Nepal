@@ -31,7 +31,8 @@ const galleryImages = [
 export default function Gallery() {
   const topRowRef = useRef<HTMLDivElement>(null);
   const bottomRowRef = useRef<HTMLDivElement>(null);
-  const rafRef = useRef<number>();
+  const rafRef = useRef<number | null>(null);
+
   const [itemWidth, setItemWidth] = useState(460); // default
 
   const scrollSpeed = 40;
