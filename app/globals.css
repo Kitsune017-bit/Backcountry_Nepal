@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: red;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --color-white-bg: #EEEDED;
+    --color-primary-text: #272727;
+    --color-secondary-text: #898785;
+    --color-accent: #FC6A6A
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #272727;
+        --foreground: #ededed;
+    }
 }
 
+@font-face {
+    font-family: "Manrope";
+    src: url("/fonts/Manrope-Regular.ttf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url("/fonts/Staatliches-Regular.ttf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+   
+    font-family: "Manrope", Helvetica, Arial, sans-serif;
+}
+
+.Staatliches{
+       font-family: "Staatliches", sans-serif;
+}
+
+.snow {
+  background: url('/snowflake.png') repeat;
+  animation: snow 20s linear infinite;
+}
+
+@keyframes snow {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 1000px; }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
