@@ -14,9 +14,7 @@
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
-      {
-        "name": "next"
-      }
+      { "name": "next" }
     ],
     "paths": {
       "@/*": ["./*"]
@@ -27,7 +25,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "types"                // 👈 add this line
+    "types/**/*.d.ts"   // 👈 add this line
   ],
   "exclude": ["node_modules"]
 }
